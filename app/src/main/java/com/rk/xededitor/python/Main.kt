@@ -7,10 +7,10 @@ import androidx.annotation.Keep
 import com.rk.extension.ActivityProvider
 import com.rk.extension.ExtensionAPI
 import com.rk.extension.ExtensionContext
-import com.rk.file.child
-import com.rk.lsp.LspRegistry
-import com.rk.utils.dialog
-import com.rk.utils.logInfo
+import com.bfoxnet.pocketcode.file.child
+import com.bfoxnet.pocketcode.lsp.LspRegistry
+import com.bfoxnet.pocketcode.utils.dialog
+import com.bfoxnet.pocketcode.utils.logInfo
 import java.io.File
 
 @Keep
@@ -19,7 +19,7 @@ class Main(context: ExtensionContext) : ExtensionAPI(context) {
 
     var pythonServer: PythonServer? = null
 
-    override fun onExtensionLoaded() {
+    override fun onLoad() {
         val pluginPath = context.extension.installPath
         logInfo(pluginPath)
 
@@ -62,7 +62,7 @@ class Main(context: ExtensionContext) : ExtensionAPI(context) {
 
     }
 
-    override fun onUpdated() {
+    override fun onDispose() {
         dispose()
     }
 

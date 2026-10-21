@@ -158,7 +158,9 @@ tasks.register<Delete>("cleanApkOutputs") {
 
 tasks.named("preBuild").configure {
     dependsOn("cleanApkOutputs")
-    dependsOn("downloadLatestJar")
+    // bfoxnet fork: sdk.jar is maintained manually (built from PocketCode plugin-sdk).
+    // Upstream's downloadLatestJar would overwrite it with upstream com.rk.* classes.
+    // dependsOn("downloadLatestJar")
 }
 
 // --------------- generate the final zip file -----------------
