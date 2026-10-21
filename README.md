@@ -1,4 +1,6 @@
-# Python LSP Extension for Xed-Editor
+# Python LSP Extension for PocketCode (Xed-Editor fork)
+
+> **Fork note (bfoxnet):** This is a fork of [Xed-Editor/Python-LSP](https://github.com/Xed-Editor/Python-LSP) recompiled for [PocketCode](https://github.com/bfoxnet/PocketCode) (`com.bfoxnet.pocketcode`), whose host classes live under `com.bfoxnet.pocketcode.*`. Install the version from this fork's releases into PocketCode; the upstream build targets original Xed-Editor and will crash there (and this build in upstream). Extension API (`com.rk.extension.*`) is unchanged. `sdk.jar` comes from the PocketCode `sdk-latest` release; the auto-downloader is disabled.
 
 An extension for [Xed-Editor](https://github.com/Xed-Editor/Xed-Editor) that provides full Python language support using the Language Server Protocol (LSP). It is powered by **ty**, Astral's extremely fast, Rust-based Python type checker and language server.
 
